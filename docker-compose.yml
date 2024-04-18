@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  app:
+    image: node:latest
+    container_name: fastify_dev
+    working_dir: /app
+    volumes:
+      - .:/app:delegated
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+    command: ["npx", "nodemon", "--exec", "ts-node", "src/index.ts"]

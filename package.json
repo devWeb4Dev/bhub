@@ -1,0 +1,20 @@
+{
+  "name": "richard",
+  "version": "1.0.0",
+  "description": "src/ |-- core/ |   |-- domain/ |   |   |-- entities/ |   |   |   |-- Pedido.ts |   |   |   `-- EventoNotificacao.ts |   |   |-- usecases/ |   |   |   |-- processarPedido/ |   |   |   |   |-- ProcessarPedido.ts (Use case principal) |   |   |   |   `-- ProcessadorDePedidos.ts (Implementação do use case) |   |   |   `-- estrategiasMensagem/ |   |   |       |-- EstrategiaMensagemEmail.ts (Interface da estratégia) |   |   |       |-- MensagemProdutoFisico.ts |   |   |       |-- MensagemLivro.ts |   |   |       `-- ... (outras estratégias) |   |   `-- services/ |   |       `-- EmailNotificationService.ts (Implementação do Observer) |   `-- ports/ |       `-- EmailServicePort.ts (Port para o serviço de email) |-- application/ |   |-- config/ |   |   `-- DependencyInjector.ts (Configuração de injeção de dependência) |   |-- web/ |   |   `-- api/ |   |       `-- PedidoController.ts (Controladores para a API/web) |-- infrastructure/ |   |-- db/ |   |   |-- models/ |   |   |   `-- PedidoModel.ts (Modelos do ORM, se aplicável) |   |   `-- DatabaseService.ts (Serviço para acesso ao banco de dados) |   |-- email/ |   |   `-- EmailServiceImpl.ts (Implementação do adaptador para o serviço de email) |   `-- logging/ |       `-- LoggerService.ts (Serviço de logging) |-- index.ts (Ponto de entrada da aplicação)",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fastify": "^4.26.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0",
+    "ts-node": "^10.9.2"
+  }
+}
